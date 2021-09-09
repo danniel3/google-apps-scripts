@@ -85,7 +85,7 @@ function subscribers_push() {
   var ss = SpreadsheetApp.openById("ADD-SPREADSHEET-ID-HERE");
   var sheet = ss.setActiveSheet(ss.getSheetByName("subscribers"));
   var numRows = sheet.getLastRow();
-  var startRow = numRows - 100;
+  var startRow = numRows - 50;
   var startCol = 1;
   var numCols = 6;
 
