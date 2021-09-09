@@ -1,4 +1,4 @@
-function narek_subscribers() {
+function subscribers_pull() {
 
   // Define Sheet properties
   var ss = SpreadsheetApp.openById("ADD-SPREADSHEET-ID-HERE");
@@ -78,7 +78,7 @@ function narek_subscribers() {
   }
 }
 
-function post_narek_subs() {
+function subscribers_push() {
 
   // Define Sheet properties
   var ss = SpreadsheetApp.openById("ADD-SPREADSHEET-ID-HERE");
