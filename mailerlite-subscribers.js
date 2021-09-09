@@ -2,7 +2,7 @@ function subscribers_pull() {
 
   // Define Sheet properties
   var ss = SpreadsheetApp.openById("ADD-SPREADSHEET-ID-HERE");
-  var sheet = ss.setActiveSheet(ss.getSheetByName("ADD-SHEET-NAME-HERE"));
+  var sheet = ss.setActiveSheet(ss.getSheetByName("subscribers"));
 
   var numRows = sheet.getLastRow();
   var startRow = 2;
@@ -75,14 +75,15 @@ function subscribers_pull() {
       numRows++;
       Logger.log("Created: " + id + " | Name: " + name + " | at " + email + ".");
     }
-  }
+  };
+  subscribers_push();
 }
 
 function subscribers_push() {
 
   // Define Sheet properties
   var ss = SpreadsheetApp.openById("ADD-SPREADSHEET-ID-HERE");
-  var sheet = ss.setActiveSheet(ss.getSheetByName("ADD-SHEET-NAME-HERE"));
+  var sheet = ss.setActiveSheet(ss.getSheetByName("subscribers"));
   var numRows = sheet.getLastRow();
   var startRow = numRows - 100;
   var startCol = 1;
